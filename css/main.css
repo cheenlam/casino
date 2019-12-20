@@ -1,0 +1,661 @@
+*{
+    color: #fff;
+}
+
+body{
+    background-color: #000;
+}
+
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+/* menu start */
+.menu{
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 15px;
+    align-items: center;
+    position: relative;
+}
+.menu_max{
+    display: flex;
+    
+}
+.menu_max li {
+    height: 120px;
+    padding: 50px 23px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.menu_max li::before{
+    content: '';
+    display: block;
+    width: 0%;
+    height: 4px;
+    background-color: #4535b3;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.menu_max li:hover:before{
+    width: 100%;
+}
+
+
+.menu_hamburger{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #fff;
+    display: none;
+    transition: 0.3s;  
+}
+.menu_hamburger:hover{
+    transform: scale(1.2)
+}
+.menu_hamburger .fas{
+    color: #4C3F3A;
+}
+
+.menu_min{
+    width: 300px;
+    font-size: 15px;
+    position: absolute;
+    right: 5px;
+    top: 70px;
+    background-color: rgba(78, 65, 59, 0.7);
+    display: none; 
+}
+.menu_min li{
+    padding: 20px;
+    transition: 0.3s;
+}
+.menu_min li:hover{
+    background-color: rgb(69, 53, 179,0.7);
+}
+
+
+
+/* main start */
+.main{
+    padding: 200px 0;
+    text-align: center;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 22px;
+    line-height: 1.2em;
+    background-image: url(../image/bg_01.jpg);
+    background-size: cover;
+}
+.main h2{
+    font-size: 68px;
+    line-height: 2em;
+}
+.main h3{
+    font-size: 65px;
+    margin-bottom: 30px;
+}
+
+.main button {
+    width: 150px;
+    height: 40px;
+    margin-top: 40px;
+    font-size: 15px;
+    color: #fff;
+    background-color: #4535b3;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    animation: bounce 2s infinite linear;
+}
+
+.main button:hover{
+    color: #4535b3;
+    background-color: #fff;
+}
+
+
+/* gametop start */
+.gametop{
+    padding: 100px 0;
+    font-size: 18px;
+    background-color: #000;
+    text-align: center;
+}
+.gametop h2{
+    font-size: 55px;
+}
+.gametop P{
+    margin: 30px 0;
+}
+.gametop_hr{
+    max-width: 660px;
+    margin: auto;
+}
+.gametop_hr img{
+    width: 100%;
+}
+
+
+@keyframes bounce {
+    0%, 20%, 53%, 80%, to {
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        transform: translateZ(0)
+    }
+    40%, 43% {
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        transform: translate3d(0, -20px, 0)
+    }
+    70% {
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        transform: translate3d(0, -15px, 0)
+       
+    }
+    90% {
+        transform: translate3d(0, -4px, 0)
+        
+    }
+}
+
+
+/* gamebody start */
+.gamebody{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.gamebody>div{
+    height: 460px;
+    width: 50%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.gamebody>div:first-child{ 
+    background: url(../image/bg_02.jpg) center;
+    transform: translateX(-100%);
+}
+.gamebody>div:nth-child(2){
+    background: url(../image/bg_03.jpg) center;
+    background-size: 100% 100%;
+    transform: translateX(100%);
+}
+
+.gamebody>div:nth-child(3){
+    background: url(../image/bg_04.jpg) center;
+    background-size: 100% 100%;
+    transform: translateX(-100%);
+}
+.gamebody>div:nth-child(4){
+    transform: translateX(100%);
+}
+
+.gamebody>div:nth-child(2):hover,
+.gamebody>div:nth-child(3):hover{
+    background-size: 120% 120%;
+}
+
+
+.gamebody>div:nth-child(2):hover::before,
+.gamebody>div:nth-child(3):hover::before{
+    content: 'PLAY NOW';
+    width: 100%;
+    height: 100%;
+    font-size: 2.8rem;
+    color: #fff;
+    background-color: rgba(69, 53, 179, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gametext{
+    padding: 50px;
+    font-size: 18px;
+    text-align: center;
+}
+.gametext h2{
+    font-size: 55px;
+}
+.gametext p{
+    line-height: 1.6em;
+    margin: 30px 0;
+}
+.gametext img{
+    max-width: 310px;
+}
+
+
+/* diningtop start */
+.diningtop{
+    padding: 100px 0;
+    font-size: 18px;
+    background-image: url(../image/bg_05.jpg);
+    background-size: cover;
+    text-align: center;
+}
+.diningtop h2{
+    font-size: 55px;
+}
+.diningtop p{
+    margin: 30px 0;
+}
+.diningtop_hr{
+    max-width: 310px;
+    margin: auto;
+}
+.diningtop_hr img{
+    width: 100%;
+}
+
+
+/* diningbody start */
+.diningbody {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.diningbody div {
+    width: 25%;
+    position: relative;
+    transform: rotateY(90deg);
+}
+
+.diningbody img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.diningbody div:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    position: absolute;
+}
+
+.diningbody div:hover::before {
+    font-size: 2.8rem;
+    background-color: rgba(69, 53, 179, 0.8);
+    
+}
+
+.diningbody div:first-child:hover:before {
+    content: 'Desserts';
+}
+
+.diningbody div:nth-child(2):hover:before {
+    content: 'Drinks';
+}
+
+.diningbody div:nth-child(3):hover:before {
+    content: 'Main Courses';
+}
+
+.diningbody div:last-child:hover:before {
+    content: 'Starters';
+}
+
+
+
+/* blogtop start */
+.blogtop{
+    padding: 100px 0;
+    font-size: 18px;
+    background-color: #000;
+    text-align: center;
+}
+.blogtop h2{
+    font-size: 40px;
+}
+.blogtop P{
+    margin: 30px 0;
+}
+.blogtop_hr{
+    max-width: 310px;
+    margin: auto;
+}
+.blogtop_hr img{
+    width: 100%;
+}
+
+
+/* blogbody start */
+
+.blogbody{  
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 20px 100px;
+    justify-content: center;
+    background-color: #000;
+}
+
+.blog_left{
+    width: 400px;
+    height: 420px;
+    margin-right: 20px;
+    background: url(../image/play_01.jpg) no-repeat center top;   
+    background-size: cover;
+    position: relative;
+    
+}
+.blog_left:before{
+    content: '';
+    transition: 0.5s;
+}
+
+.blog_left:hover::before{
+    content: "What's a Bingo Game?";
+    font-size: 30px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(69, 53, 179, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0; 
+}
+
+
+.blog_right{
+    width: 600px;
+    height: 420px;  
+}
+
+.blog_right img{
+    width: 200px;
+    height: 200px;
+}
+
+.blog_right>div{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.blog_text{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.blog_text span{
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #000;
+}
+.blog_text p{
+    color: #000;
+}
+
+
+/* testimonial start */
+.testimonial{
+    width: 100%;
+    height: 700px;
+    background: url(../image/bg_06.jpg)  no-repeat;
+    background-size: cover;
+}
+
+.testimonial_top{
+    text-align: center;
+    padding: 20px;
+}
+.testimonial h2{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.testimonial_hr{
+    max-width: 310px;
+    margin: auto;
+}
+
+
+.testimonial_body{
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;  
+}
+
+.testimonial_body ul{
+    display: flex;
+    transform: translateX(0%);
+    transition: 1s;
+    
+}
+.testimonial_body li{
+    max-width: 600px;
+    height: 500px;
+    padding: 20px;
+    font-size: 22px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.avatar{
+    width: 120px;
+    height: 120px;
+    margin: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+
+.reel ul{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.reel li{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255,0.5);
+    margin-right: 30px;
+    transition: 0.3s;
+}
+
+.reel li:hover{
+    transform: scale(1.5);
+}
+
+.reel .reel_color{
+    background-color: rgba(69, 53, 179);
+}
+
+
+/* message start */
+.message{
+    background-color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.message>div{
+    width: calc(100% / 4);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.message_logo{
+    width: 175px;
+    margin-bottom: 20px;
+}
+.message span{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+
+/* footer start */
+.footer{
+    padding: 30px;
+    background-color: #121313;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* gotop start */
+.gotop{
+    font-size: 40px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: none;
+}
+
+.gotop:hover{
+    opacity: 1;
+}
+
+
+
+
+
+/* ============================================================================== */
+/* RWD 與 共用設定區 */
+.gamebody>div:nth-child(2),
+.gamebody>div:nth-child(3),
+.menu_max li:hover,
+.menu_hamburger:hover,
+.menu_min li:hover,
+.main button:hover,
+.diningbody div,
+.blog_left,
+.reel li:hover,
+.gotop:hover{
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 400px){
+    .testimonial_body,
+    .testimonial_body li{
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 870px) and (min-width: 401px) {
+    .testimonial_body,
+    .testimonial_body li{
+        width: 400px;
+    }
+}
+
+
+@media only screen and (max-width: 599px){
+    .diningbody div{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 870px) {
+    .menu{
+        justify-content: space-between;
+        padding: 10px;  
+    }
+    .menu_max{
+        display: none;
+    }
+    .menu_hamburger{
+        display: block;
+    }
+    .main,
+    .gametop,
+    .diningtop,
+    .blogtop{
+        padding: 30px;
+    }
+    .main h2,
+    .main h3,
+    .gametop h2,
+    .diningtop h2,
+    .blogtop h2{
+        font-size: 36px;
+    }
+    .main span,
+    .gametop p,
+    .diningtop p,
+    .blogtop p{
+        font-size: 18px;
+    } 
+
+    .message>div{
+        width: 100%;
+    }
+
+}
+
+
+@media only screen and (max-width: 1200px) and (min-width: 600px){
+    .diningbody div{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1023px){
+    .gametext h2{
+        font-size: 36px;
+    }
+    .gametext p{
+        font-size: 18px;
+    }
+    .gamebody>div{
+        width: 100%;
+    } 
+
+}
+
+@media only screen and (max-width: 1075px){
+    .blog_left{
+        width: 600px;
+        height: 300px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+
